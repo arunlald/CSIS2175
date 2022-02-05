@@ -24,3 +24,5 @@ public class Purchase
         System.out.println("Amount of sales tax: "+amountOfSalesTax);
     }
 }
+
+// Arun David (300347125)
