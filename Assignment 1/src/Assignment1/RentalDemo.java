@@ -10,31 +10,17 @@ public class RentalDemo {
         // creating 1st object for Rental Class
         Rental obj1 = new Rental();
         
-        // calling methods using 1st object and storing the returned values
-        //String obj1_contract = obj1.getContractNumber();
-        //int obj1_hours = obj1.getHoursRental();
-        //int obj1_minutes = obj1.getMinutesRental();
-        //double obj1_price = obj1.getPrice();
-        
-        // calling this class display method
-        //display(obj1_contract, obj1_hours, obj1_minutes, obj1_price);
+        // calling the display method using first object
         display (obj1.getContractNumber(),obj1.getHoursRental(),obj1.getMinutesRental(),obj1.getPrice());
 
-        // getting contract and minutes from methods getting the user inputs
+        // initializing data fields by getting contract and minutes from methods getting the user inputs
         String contract =setContract();
         int minutes = setMinutes();
 
         // creating 2nd object for Rental Class and passing the two local variables within the constructor
         Rental obj2 = new Rental(contract,minutes);
         
-        // calling methods using 2nd object and storing the returned values
-        //String obj2_contract = obj2.getContractNumber();
-        //int obj2_hours = obj2.getHoursRental();
-        //int obj2_minutes = obj2.getMinutesRental();
-        //double obj2_price = obj2.getPrice();
-        
-        // calling this class display method
-        //display(obj2_contract, obj2_hours, obj2_minutes, obj2_price);
+        // calling the display method using second object
         display (obj2.getContractNumber(),obj2.getHoursRental(),obj2.getMinutesRental(),obj2.getPrice());
 
     }
@@ -62,3 +48,5 @@ public class RentalDemo {
         System.out.println("Total price: " + price);
     }
 }
+
+//Arun David (300347125)

@@ -30,7 +30,7 @@ public class Rental {
     // setter method for Hours and Minutes
     public void setHoursAndMinutes(int minutes){
         num_of_hours_for_rental = minutes/num_min;
-        num_of_minutes_over_an_hour = minutes%num_min; //- (num_of_hours_for_rental * 60);
+        num_of_minutes_over_an_hour = minutes%num_min;
         price = (num_of_hours_for_rental * hourly_rent_rate) + num_of_minutes_over_an_hour;
     }
 
@@ -54,3 +54,5 @@ public class Rental {
         return price;
     }
 }
+
+//Arun David (300347125)

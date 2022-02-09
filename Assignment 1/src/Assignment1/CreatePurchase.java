@@ -13,30 +13,17 @@ public class CreatePurchase
         Scanner s=new Scanner(System.in);
         System.out.println("***Purchase Details***");
         
-        while(true)
-        {
             System.out.print("Enter invoice number[between 1000 and 8000]: ");
-            int i=s.nextInt();
+            //int i=s.nextInt();
+            purchase.setInvoiceNumber(s.nextInt());
             
-            // user input validation for invoice number
-            if(i>=1000 && i<=8000)
-            	{purchase.setInvoiceNumber(i);break;}
-            else 
-            	System.out.println("Wrong entry,enter again");
-        }
         
-        while(true)
-        {
             System.out.print("Enter amount of purchase[should be non-negative]: ");
-            int i=s.nextInt();
-            
-            // user input validation for amount of sales
-            if(i>=0)
-            	{purchase.setAmountOfSales(i);break;}
-            else 
-            	System.out.println("Wrong entry,enter again");
-        }
-        
+            //int a=s.nextInt();
+            purchase.setAmountOfSales(s.nextInt());
+  
         purchase.display();
     }
 }
+
+//Arun David (300347125)

@@ -19,6 +19,10 @@ public class Event {
 		if (numberOfGuest<=50) {
 		price = numberOfGuest*PRICE_PER_GUEST;
 		}
+		else {
+			System.out.println("The number of guests for the event is above the maximum limit.");
+			System.exit(guestNum);
+		}
 	}
 	
 	// three public get method
@@ -44,3 +48,5 @@ public class Event {
         this("A000", 0, 0);
     }
 }
+
+//Arun David (300347125)
