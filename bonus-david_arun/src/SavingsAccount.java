@@ -47,13 +47,14 @@ public class SavingsAccount extends BankAccount {
 	 * superclass version of the method.
 	 */
 	
-	public void deposit(double depositAmount) { // is if(!active) condition required in this method???
+	public void deposit(double depositAmount) { // should it be if and else instead of two if statements???
 		if (active) {
 			super.deposit(depositAmount);
 		}
-		if(!active) { if(balance+depositAmount>=25) 
-		{ active = true; 
-		super.deposit(depositAmount);
+		if(!active) { 
+			if(balance+depositAmount>25){ 
+				active = true; 
+				super.deposit(depositAmount);
 			} 
 		}
 	}

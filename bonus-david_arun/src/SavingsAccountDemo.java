@@ -6,7 +6,7 @@ public class SavingsAccountDemo {
 		/*Next, create a SavingsAccount object with a $100 balance, 3% interest rate, and a monthly service charge of $2.50. 
 		Display the balance, number of deposits, number of withdrawals.*/
 		
-		SavingsAccount newAccount = new SavingsAccount(1000,0.03,2.5);
+		SavingsAccount newAccount = new SavingsAccount(100,0.03,2.5);
 		
 		System.out.println("Balance: " + newAccount.balance);
 		System.out.println("Number of deposits: " + newAccount.numDeposits);
