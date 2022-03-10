@@ -47,13 +47,15 @@ public class SavingsAccount extends BankAccount {
 	 * superclass version of the method.
 	 */
 	
-	public void deposit(double depositAmount) {
+	public void deposit(double depositAmount) { // is if(!active) condition required in this method???
 		if (active) {
 			super.deposit(depositAmount);
 		}
-		/*
-		 * if(!active) { if(balance+depositAmount>=25) { active = true; } }
-		 */
+		if(!active) { if(balance+depositAmount>=25) 
+		{ active = true; 
+		super.deposit(depositAmount);
+			} 
+		}
 	}
 	
 	/*
@@ -65,19 +67,20 @@ public class SavingsAccount extends BankAccount {
 	 * $25, the account becomes inactive.)
 	 */
 	
-	public void monthlyProcess() {
+	public void monthlyProcess() {	
 		if (numWithdrawals>4) {
 			monthlyServiceCharge +=1;
+			//balance -= monthlyServiceCharge;
+			//calcInterest();
+			super.monthlyProcess();
+			
+		}		
+		else {
+			super.monthlyProcess();
 		}
-		balance -= monthlyServiceCharge;
-		calcInterest();
+		//calcInterest();
 		if (balance<25) {
 			active = false;
 		}
-		// not mentioned on the PDF but without this the last output will be incorrect.
-		numWithdrawals = 0;
-		numDeposits = 0;
-		
-	}
-	
+	}	
 }
