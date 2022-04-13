@@ -9,11 +9,11 @@ public class EmployeeDemo {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Enter Employee Name: ");
-		input.next();
-		
-		System.out.println("Enter Employee Hours: ");
-		input.nextInt();
+//		System.out.println("Enter Employee Name: ");
+//		input.next();
+//		
+//		System.out.println("Enter Employee Hours: ");
+//		input.nextInt();
 		
 		System.out.println(Object1.getTotalPay());
 
